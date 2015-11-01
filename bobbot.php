@@ -20,7 +20,7 @@ $bobWisdom = ["That's a crooked tree. We'll send him to Washington.", "I like to
 $todaysWisdom = array_rand($bobWisdom, 1);
 
 //send the random Bob wisdom back
-if($text === "/bob" || "/bob@BobRossBot") {
+if($text === "/bob" || $text === "/bob@BobRossBot") {
 	file_get_contents($website."/sendmessage?chat_id=".$chatId."&text=".$bobWisdom[$todaysWisdom]);
 }
 
