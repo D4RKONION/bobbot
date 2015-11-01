@@ -1,7 +1,7 @@
 <?php
 
 //set up the Bot API token
-$botToken = "000000000:AAAAa0aAA_aaA-Aaaa0A0Aa_a0aa0A0AAAA";
+$botToken = "152790712:AAERn4iMA_rcX-Svgh5H4Xt_q1me3Hw8JJI";
 $website = "https://api.telegram.org/bot".$botToken;
 
 //Grab the info from the webhook, parse it and put it into $message
@@ -20,7 +20,7 @@ $bobWisdom = ["That's a crooked tree. We'll send him to Washington.", "I like to
 $todaysWisdom = array_rand($bobWisdom, 1);
 
 //send the random Bob wisdom back
-if($text === "/bob") {
+if($text === "/bob" || "/bob@BobRossBot") {
 	file_get_contents($website."/sendmessage?chat_id=".$chatId."&text=".$bobWisdom[$todaysWisdom]);
 }
 
